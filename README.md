@@ -95,8 +95,9 @@ POST /predict
 ## 📊 Screenshots
 
 <img width="1452" height="836" alt="Screenshot 2025-10-21 at 2 59 43 AM" src="https://github.com/user-attachments/assets/b1b764fa-5d79-400f-8d11-350e42bfacc7" />
+<img width="1439" height="819" alt="Screenshot 2025-10-21 at 3 00 07 AM" src="https://github.com/user-attachments/assets/b3e3aeec-7c1d-4afb-9ef1-27be1b211b65" />
 
-<img width="1452" height="836" alt="Screenshot 2025-10-21 at 2 59 43 AM" src="https://github.com/user-attachments/assets/b1b764fa-5d79-400f-8d11-350e42bfacc7" />
+
 
 ---
 
