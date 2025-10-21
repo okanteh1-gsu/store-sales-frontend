@@ -1,17 +1,117 @@
-# React + Vite
+# 🏪 Store Sales Intelligence Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**AI-Powered Sales Predictor for Gas Stations**
+Predict daily store sales using gas sales, lotto sales, and day type (weekday/weekend). Visualize historical trends, run scenario analyses, and gain business insights.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
 
-## React Compiler
+* **Backend API:** [https://store-sales-api-1.onrender.com](https://store-sales-api-1.onrender.com)
+* **Frontend App:** [https://store-sales-frontend.onrender.com](https://store-sales-frontend.onrender.com)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📦 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# store-sales-frontend
+### Backend
+
+* FastAPI REST API for predictions
+* Train a **linear regression model** on historical sales data
+* Single and batch predictions
+* Historical data endpoints
+* Model info endpoints
+* Sample ranges for frontend input sliders
+
+### Frontend
+
+* React dashboard with interactive inputs
+* Sales charts (line, bar, pie)
+* Prediction history table
+* Scenario analysis for best, worst, and average days
+* Business insights and recommendations
+
+---
+
+## 🛠 Technologies
+
+* **Backend:** Python, FastAPI, NumPy, Pandas
+* **Frontend:** React.js, Axios, Chart.js
+* **Deployment:** Render
+* **Version Control:** Git & GitHub
+
+---
+
+## ⚙️ Installation
+
+### Backend
+
+```bash
+git clone https://github.com/okanteh1-gsu/store_sales_api.git
+cd store_sales_api
+python -m venv venv
+source venv/bin/activate  # macOS/Linux
+# .\venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+### Frontend
+
+```bash
+git clone https://github.com/okanteh1-gsu/store-sales-frontend.git
+cd store-sales-frontend
+npm install
+npm start
+```
+
+---
+
+## 🔧 API Endpoints (Backend)
+
+| Endpoint             | Method | Description                     |
+| -------------------- | ------ | ------------------------------- |
+| `/`                  | GET    | API root                        |
+| `/predict`           | POST   | Predict sales for a single day  |
+| `/predict_batch`     | POST   | Predict sales for multiple days |
+| `/history`           | GET    | Retrieve historical sales data  |
+| `/model_info`        | GET    | Get model weights & info        |
+| `/sample_ranges`     | GET    | Min, max, mean for inputs       |
+| `/weekly_sales_json` | GET    | JSON data for charts            |
+
+**Sample Request (Single Prediction):**
+
+```json
+POST /predict
+{
+  "TotalGasGallons": 500,
+  "LottoSales": 200,
+  "DayType": 0
+}
+```
+
+---
+
+## 📊 Screenshots
+
+<img width="1452" height="836" alt="Screenshot 2025-10-21 at 2 59 43 AM" src="https://github.com/user-attachments/assets/b1b764fa-5d79-400f-8d11-350e42bfacc7" />
+
+<img width="1452" height="836" alt="Screenshot 2025-10-21 at 2 59 43 AM" src="https://github.com/user-attachments/assets/b1b764fa-5d79-400f-8d11-350e42bfacc7" />
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+MIT License © Omar Kanteh
+
+---
