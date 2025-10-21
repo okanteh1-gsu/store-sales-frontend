@@ -8,7 +8,7 @@ Predict daily store sales using gas sales, lotto sales, and day type (weekday/we
 ## 🔗 Live Demo
 
 * **Backend API:** [https://store-sales-api-1.onrender.com](https://store-sales-api-1.onrender.com)
-* **Frontend App:** [https://store-sales-frontend.onrender.com](https://store-sales-frontend.onrender.com)
+* **Frontend App:** [[https://store-sales-frontend.onrender.com](https://store-sales-frontend.onrender.com)](https://store-sales-frontend.onrender.com)
 
 ---
 
