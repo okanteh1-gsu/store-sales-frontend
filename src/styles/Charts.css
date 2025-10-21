@@ -1,0 +1,48 @@
+.chart-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.large-chart {
+  padding: 25px;
+  height: 400px;
+}
+
+.small-chart {
+  padding: 20px;
+  flex: 1;
+}
+
+.chart-title {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.charts-row {
+  display: flex;
+  gap: 20px;
+  height: 320px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
